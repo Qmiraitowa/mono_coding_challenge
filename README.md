@@ -1,17 +1,21 @@
-# mono_coding_challenge
-Coding challenge of full stack position of MONO studio
+## Wedding Data Processor
 
-# Requirement
-Use Python or JavaScript to print:
-- the user name of all the weddings that take place in 2024 june
-- the user name of all the wedding will happen in 2 weeks
+This Python script imports user and wedding data from CSV files into a PostgreSQL database, queries for specific wedding events, and outputs the results to files.
 
+### Requirements
+- Python 3.x
+- PostgreSQL
+- `psycopg2` library
 
-All the information is provided in the CSV attached. you can fork this repo to start the challenge.
+### Setup
 
+1. Install the required Python packages:  `pip install psycopg2`
+2. Ensure PostgreSQL is installed and running, and create a database (`wedding_db`).
+3. Modify the database connection parameters in the script to match your setup.
+4. Run the script: *wedding_data_processor.py*
+5. The results will be saved to `june_2024_weddings.txt` and `upcoming_weddings.txt`.
 
-## Your need to follow these rules:
-- use a DB (pandas or similar package is not accepted)
-- save the output in the file
-- your code should be testable on any platform (windows/linux/macos)
-- commit message/ readme/ unit test is also part of the test.
+### Unit Tests
+
+Use the `unittest` framework to test the functions: *test.py*
+
